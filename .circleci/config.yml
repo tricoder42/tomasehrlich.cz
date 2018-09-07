@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    branches:
+      ignore:
+        - gh-pages
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: node-modules-{{ checksum "yarn.lock" }}
+
+      - run: yarn
+
+      - save_cache:
+          key: node-modules-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+
+      - run: yarn build
+
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git config --global user.email tomas.ehrlich@gmail.com
+              git config --global user.name "Tomáš Ehrlich"
+              yarn deploy
+            fi
