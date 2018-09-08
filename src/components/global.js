@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 import { library, config, dom } from '@fortawesome/fontawesome-svg-core'
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -6,7 +6,7 @@ import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 config.autoAddCss = false
 library.add(faTwitter, faGithub)
 
-injectGlobal`
+export default createGlobalStyle`
   ${dom.css()};
 
   * {
@@ -45,8 +45,8 @@ injectGlobal`
     font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   }
 
-  @media (max-width: 960px),
-    (max-device-width: 960px) {
+  @media (max-width: ${props => props.theme.breakpoint.m}),
+    (max-device-width: ${props => props.theme.breakpoint.m}) {
     html {
       font-size: 112.5%/1.45em;
       h1 {
@@ -67,8 +67,8 @@ injectGlobal`
     }
   }
 
-  @media (max-width: 500px),
-    (max-device-width: 500px) {
+  @media (max-width: ${props => props.theme.breakpoint.s}),
+    (max-device-width: ${props => props.theme.breakpoint.s}) {
     html {
       font-size: 14px;
       h1 {
