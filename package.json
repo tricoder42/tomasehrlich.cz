@@ -12,14 +12,14 @@
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-styled-components": "^3.0.0-rc.1",
+    "gatsby-plugin-styled-components": "next",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
-    "styled-components": "^4.0.0-beta.1"
+    "styled-components": "^3.4.5"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.6.3",
+    "babel-plugin-styled-components": "^1.6.4",
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },

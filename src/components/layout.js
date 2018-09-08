@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
 
 import { Twitter, GitHub } from './icons'
-import GlobalStyle from './global'
+import './global'
 
 const Root = styled.div`
   margin: 0 auto;
@@ -63,9 +63,9 @@ const Layout = ({ children }) => (
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Helmet>
 
-        <ThemeProvider theme={defaultTheme}>
+        {/* <ThemeProvider theme={defaultTheme}>
           <GlobalStyle />
-        </ThemeProvider>
+        </ThemeProvider> */}
 
         <ThemeProvider theme={defaultTheme}>
           <Root>
