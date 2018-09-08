@@ -28,7 +28,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public -m 'Updates [ci skip]'"
   },
   "repository": {
     "type": "git",

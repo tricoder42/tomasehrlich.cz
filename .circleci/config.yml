@@ -1,9 +1,10 @@
 version: 2
 jobs:
   build:
-    branches:
-      ignore:
-        - gh-pages
+    # This doesn't work, because gh-pages branch doesn't have .circleci config
+    # branches:
+    #   ignore:
+    #     - gh-pages
     docker:
       - image: circleci/node:latest
     steps:
