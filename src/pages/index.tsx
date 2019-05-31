@@ -1,7 +1,7 @@
-import * as React from 'react'
-import styled from 'styled-components'
+import * as React from "react"
+import styled from "styled-components"
 
-import Layout from '../components/layout'
+import Layout from "../components/layout"
 
 const FullPage = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ const SubTitle = styled.small`
   border-top: 1px solid black;
 `
 
-const IndexPage = () => (
+export default () => (
   <Layout>
     <FullPage>
       <Title>
@@ -36,5 +36,3 @@ const IndexPage = () => (
     </FullPage>
   </Layout>
 )
-
-export default IndexPage

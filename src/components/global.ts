@@ -1,10 +1,8 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
-import { library, config, dom } from '@fortawesome/fontawesome-svg-core'
-import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { config, dom } from "@fortawesome/fontawesome-svg-core"
 
 config.autoAddCss = false
-library.add(faTwitter, faGithub)
 
 export default createGlobalStyle`
   ${dom.css()};

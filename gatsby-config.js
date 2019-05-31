@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tomáš Ehrlich',
+    title: "Tomáš Ehrlich"
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
@@ -17,6 +17,7 @@ module.exports = {
     //   },
     // },
     // 'gatsby-plugin-offline',
-    'gatsby-plugin-styled-components',
-  ],
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-typescript"
+  ]
 }

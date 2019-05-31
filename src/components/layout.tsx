@@ -1,10 +1,10 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import styled, { ThemeProvider } from 'styled-components'
+import * as React from "react"
+import Helmet from "react-helmet"
+import { StaticQuery, graphql } from "gatsby"
+import styled, { ThemeProvider } from "styled-components"
 
-import { Twitter, GitHub } from './icons'
-import GlobalStyle from './global'
+import { Twitter, GitHub } from "./icons"
+import GlobalStyle from "./global"
 
 const Root = styled.div`
   margin: 0 auto;
@@ -19,8 +19,8 @@ const Navigation = styled.nav`
 `
 
 const brandColors = {
-  twitter: '#1da1f2',
-  github: '#333',
+  twitter: "#1da1f2",
+  github: "#333"
 }
 
 const SocialLink = styled.a`
@@ -28,15 +28,15 @@ const SocialLink = styled.a`
 
   color: #999;
   :hover {
-    color: ${props => brandColors[props.theme] || 'black'};
+    color: ${props => brandColors[props.theme] || "black"};
   }
 `
 
 const defaultTheme = {
   breakpoint: {
-    s: '500px',
-    m: '960px',
-  },
+    s: "500px",
+    m: "960px"
+  }
 }
 
 const Layout = ({ children }) => (
@@ -55,8 +55,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: "description", content: "Sample" },
+            { name: "keywords", content: "sample, something" }
           ]}
         >
           <html lang="en" />
